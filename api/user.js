@@ -3,7 +3,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-
+  console.log('bammmmmmmmm')
   const token = '8303026583:AAFjH0ttFEZCOIJaZlgW5my33HfV4jSIqA0';
   const chatId = '-5096357861';
 
