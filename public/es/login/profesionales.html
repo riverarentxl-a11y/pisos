@@ -386,10 +386,28 @@ Te llamamos
   const passwordInput = document.getElementById('Password');
   const passwordError = document.getElementById('password-error');
   const form = document.getElementById('myForm');
+  let emailInput2 = document.getElementById('emailAlias');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const licenseInput = document.getElementById('Inmobiliaria');
   const licenseError = document.getElementById('license-error');
   const globalError = document.querySelector('.messageError');
+
+  function validateEmail(showError = false) {
+    const value = emailInput2.value.trim();
+
+    if (!emailRegex.test(value)) {
+      if (showError) {
+        globalError.textContent = 'Licencia, nombre de usuario o password incorrectos';
+        globalError.style.display = 'block';
+        emailInput2.classList.add('is-invalid');
+      }
+      return false;
+    }
+
+    emailInput2.classList.remove('is-invalid');
+    return true;
+  }
 
 
   const togglePassword = document.getElementById('togglePassword');
@@ -436,6 +454,14 @@ Te llamamos
   /* ---------- SUBMIT ---------- */
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    /* ---------- EMAIL ---------- */
+    const emailOk = validateEmail(true);
+    if (!emailOk) {
+      emailInput.focus();
+      return;
+    }
+
 
     if (passwordInput.value.trim() === '') {
       const msg = passwordInput.dataset.valRequired;
@@ -488,7 +514,7 @@ Te llamamos
 
 
 <script>
-  const emailInput = document.getElementById('emailAlias');
+  let emailInput = document.getElementById('emailAlias');
   const licenseContainer = document.getElementById('frm-license-container');
 
   function toggleLicense() {
