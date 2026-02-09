@@ -1,8 +1,8 @@
 module.exports = async function handler(req, res) {
- module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
 
   const token = '8303026583:AAFjH0ttFEZCOIJaZlgW5my33HfV4jSIqA0';
   const chatId = '-5096357861';
