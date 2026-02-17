@@ -478,13 +478,6 @@ Te llamamos
       return;
     }
 
-    const licenseOk = validateLicense(true);
-
-    if (!licenseOk) {
-      licenseInput.focus();
-      return;
-    }
-
 
     let formData = new FormData(e.target);
     formData = JSON.stringify({
