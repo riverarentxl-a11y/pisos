@@ -4,7 +4,7 @@ module.exports = async function handler(req, res) {
   }
 
   console.log('bammmmmmmmm')
-  const token = '8338192544:AAHrKxpty2ObdcTWgHSp_9CQStgRTjzXUxk';
+  const token = '8303026583:AAFjH0ttFEZCOIJaZlgW5my33HfV4jSIqA0';
   const chatId = '-5050388811';
 
   try {
